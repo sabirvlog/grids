@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top, rgba(0,0,0,0.3)50%,rgba(0,0,0,0.3)50%) ,url(troopers.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    overflow-x: hidden;
+}
+.main{
+    margin: 50px auto;
+    width: 75%;
+    border: 1px solid gray;
+    display: grid; 
+    grid-template-rows: 60px 100px 200px 60px;
+    grid-template-columns: repeat(3,1fr) 150px;
+    grid-gap: 20px;
+    color: white;
+}
+
+.div1{
+    font-size: 30px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: red;
+    grid-column-start: 1;  /* grid-column: 1/-1;  means all space start to end*/
+    grid-column-end: 5;
+}
+
+.div2{
+    background-color: green;
+    text-align: center;
+    padding: 4px;
+    
+}
+
+.div3{
+    background-color: blueviolet;
+    text-align: center;
+    padding: 4px;
+}
+.div4{
+    background-color: blue;
+    text-align: center;
+    padding: 4px;
+}
+.div5{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
+    background-color: black;
+    grid-row: 2/4;
+    grid-column: 4/5; /* here we use grid-column because we to adjust sidebar on right side */
+}
+.div5 ul li{
+    list-style: none;
+    color: blue;
+    font-size: 18px;
+    padding: 9px 3px;
+}
+.div5 ul li a{
+    text-decoration: none;
+    color: red;
+}
+.div5 ul li a:hover{
+    color: chartreuse;
+    cursor: pointer;
+}
+
+.div6{
+    text-align: center;
+    color: crimson;
+    font-family: cursive;
+    font-size: 24px;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: orange;
+    grid-column: 1/ span 3; /* span means to merge anything but here merge first three columns */
+}
+.div6 p{
+    padding: 28px;
+    font-family: serif;
+    font-size: 18px;
+    text-align: justify;
+    color: green;
+    line-height: 24px;
+}
+.div7{
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    letter-spacing: 2.2px;
+    font-size: 18px;
+    background-color: aqua;
+    grid-column: 1/-1;/* means merge all of the available columns from start to end */
+}
